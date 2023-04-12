@@ -13,6 +13,6 @@ class PageController extends Controller
         $data = [
             'trains'=> $trains
         ];
-        return view('welcome', $data);
+        return view('layouts.home', $data);
     }
 }
