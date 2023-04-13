@@ -18,6 +18,7 @@ class TrainSeeder extends Seeder
     public function run(Faker $faker)
     {
         $aziende = ['trenitalia', 'italo', 'trenord'];
+        $bool= [0,1];
 
         for ($i = 0; $i < 10; $i++) {
             $partenze = ($today = Carbon::today());
@@ -33,7 +34,9 @@ class TrainSeeder extends Seeder
             $new_train->orario_di_arrivo = $arrivi;
             $new_train->codice_treno = $faker->bothify('??-######');
             $new_train->numero_carrozze = $faker->numberBetween(2, 15);
-                       
+            $new_train->in_orario = $faker->randomElement($bool);
+            $new_train->cancellato = $faker->randomElement($bool); 
+
             $new_train->save();
         }
     }
