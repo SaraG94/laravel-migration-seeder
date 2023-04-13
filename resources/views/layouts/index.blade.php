@@ -12,7 +12,7 @@
                         <li class="list-group-item">A: {{$train->stazione_di_arrivo}}</li>
                         <li class="list-group-item">Partenza: {{$train->orario_di_partenza}}</li>
                         <li class="list-group-item">Arrivo: {{$train->orario_di_arrivo}}</li>
-                        <li class="list-group-item">Ritardo di {{$train->in_orario}} minuti</li>
+                        <li class="list-group-item">In ritardo di {{$train->in_orario}} minuti</li>
                     </ul>
                 </div>
             </div>
